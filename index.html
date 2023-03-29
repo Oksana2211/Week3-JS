@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style/style.css" rel="stylesheet" />
+  <link href="style/normalize.css" rel="stylesheet" />
+  <title>JavaScript</title>
+</head>
+<body>
+  <section class="root">
+  <h1>Приветствую</h1>
+  <h2>Ответы на вопросы</h2>
+  <section>
+    <ol>
+      <li>
+        Сколько детей (дочерних DOM-узлов) у элемента ul в примере ниже:<br />
+  ul<br />
+  li Привет li<br />
+  li Мир li<br />
+  ul<br />
+      </li>
+      <p>Ответ: 2;</p><br />
+      <li>Есть такой элемент: input id= "input" value = "Привет". Какой вызов поменяет значение в нём?</li>
+      <p>Ответ: let value = input.setAttribute('value', 'Пока'); ==> input id= "input" value = "Пока";</p><br />
+      <li>
+        Сколько потомков будет у div после кода ниже?<br />
+          div id="div" /div<br />
+p id="p" Привет /p<br />
+script<br />
+  div.append(p);<br />
+  div.append(p);<br />
+script<br />
+      </li>
+      <p>Ответ: дочерний элемент p и текстовый узел;</p><br />
+      <li>В каких случаях для элемента elem не верно elem.firstChild == elem.lastChild?<br />
+- Когда у elem два или более потомков<br />
+- Когда у elem единственный потомок<br />
+- Когда у elem нет потомков<br />
+- Нет такого варианта ответа<br /></li>
+<p>Ответ: Когда у elem нет потомков;Когда у elem единственный потомок;</p><br />
+<li>Какое свойство задает класс элемента?</li>
+<p>Ответ: classList.add() </p><br />
+<li>Для чего используется запись: setAttribute(name, value)?</li>
+<p>Ответ: Устанавливает значение атрибута;</p><br />
+<li>Назовите метод добавления текста к документу.</li>
+<p>Ответ: Свойство textContent позволяет считывать или задавать текстовое содержимое элемента.</p><br />
+<li>Как получить HTML-содержимое DOM-элемента elem?</li>
+<p>Ответ: Свойство innerHTML содержит в себе строку со всем наполнением элемента (в том числе и разметкой);</p><br />
+<li>Что такое объект события и какие у него могут быть свойства?</li>
+<p>Ответ: Объект Event описывает событие, произошедшее на странице;</p><br />
+    </ol>
+  </section>
+  <section class="block">
+    <div class="block-text"><h3 class="text-menu">menu</h3>
+    <p class="text-p">Popular Dishes</p></div>
+    <div class="block-card">
+      <div class="card">
+        <img class="img" src="img/chicken-manjoori.jpg" alt="Chicken Manjoori">
+        <p>Chicken Manjoori</p>
+        <p>450p</p>
+        <button class="btn text-menu">Add basket</button>
+      </div>
+    <div class="card">
+      <img class="img" src="img/fresh-salmon.jpg" alt="fresh salmon">
+      <p>Fresh Salmon</p>
+        <p>350p</p>
+        <button class="btn text-menu">Add basket</button>
+    </div>
+    <div class="card">
+      <img class="img" src="img/hotdog.jpg" alt="hotdog">
+      <p>Hotdog</p>
+        <p>300p</p>
+        <button class="btn text-menu">Add basket</button>
+    </div>
+    <div class="card">
+      <img class="img" src="img/veg-burger.jpg" alt="veg burger">
+      <p>Veg Burger</p>
+        <p>500p</p>
+        <button class="btn text-menu">Add basket</button>
+    </div>
+  </div>
+    <div class="block-basket">Корзина</div>
+  </section>
+</section>
+  <script src="index.js"></script>
+</body>
+</html>
