@@ -45,43 +45,59 @@ script<br />
 <li>Для чего используется запись: setAttribute(name, value)?</li>
 <p>Ответ: Устанавливает значение атрибута;</p><br />
 <li>Назовите метод добавления текста к документу.</li>
-<p>Ответ: Свойство textContent позволяет считывать или задавать текстовое содержимое элемента.</p><br />
+<p>Ответ: Свойство textContent позволяет считывать или задавать текстовое содержимое элемента;</p><br />
 <li>Как получить HTML-содержимое DOM-элемента elem?</li>
 <p>Ответ: Свойство innerHTML содержит в себе строку со всем наполнением элемента (в том числе и разметкой);</p><br />
 <li>Что такое объект события и какие у него могут быть свойства?</li>
-<p>Ответ: Объект Event описывает событие, произошедшее на странице;</p><br />
-    </ol>
+<p>Ответ: Получить детальную информацию о событии в обработчике можно посредством объекта события - Event;</p><br />
+<li>Что такое BOM и DOM?</li>
+<p>Ответ: Browser Object Model (BOM) - объектная модель браузера. Основные объекты Browser Object Model: window, navigator, history, location, screen, document. Document Object Model (DOM) — это объектная модель документа, которую браузер создает в памяти компьютера на основании HTML-кода; </p><br />
+<li>Как найти:<br />
+  Таблицу с `id="age-table"`<br />
+Все элементы `label` **внутри** этой таблицы (их три)<br />
+Форму `form` с именем `name="search-person"`<br />
+<img src="img/html.png" alt="html-скрин"><br />
+<p>Ответ:<br />
+const table = document.getElementById('age-table');<br />
+const label = document.querySelector('#age-list');<br />
+const form = document.getElementsByName('search-person');<br /></p>
+</li>
+<li>Как сделать переход на другую страницу при клике на кнопку (без a href=...>, только средствами JavaScript)?</li>
+<p>Ответ:<br />
+  function click() {<br />
+  location.href = "https:///"; <br />
+} </p><br />
+</ol>
   </section>
   <section class="block">
-    <div class="block-text"><h3 class="text-menu">menu</h3>
-    <p class="text-p">Popular Dishes</p></div>
+    <h3 class="block-text">basket</h3>
     <div class="block-card">
       <div class="card">
         <img class="img" src="img/chicken-manjoori.jpg" alt="Chicken Manjoori">
         <p>Chicken Manjoori</p>
-        <p>450p</p>
-        <button class="btn text-menu">Add basket</button>
+        <p>$<output id="namber1">15</output></p>
       </div>
     <div class="card">
       <img class="img" src="img/fresh-salmon.jpg" alt="fresh salmon">
-      <p>Fresh Salmon</p>
-        <p>350p</p>
-        <button class="btn text-menu">Add basket</button>
+      <p >Fresh Salmon</p>
+        <p >$<output id="namber2">5</output></p>
     </div>
     <div class="card">
       <img class="img" src="img/hotdog.jpg" alt="hotdog">
-      <p>Hotdog</p>
-        <p>300p</p>
-        <button class="btn text-menu">Add basket</button>
+      <p >Hotdog</p>
+        <p >$<output id="namber3">8</output></p>
     </div>
     <div class="card">
       <img class="img" src="img/veg-burger.jpg" alt="veg burger">
-      <p>Veg Burger</p>
-        <p>500p</p>
-        <button class="btn text-menu">Add basket</button>
+      <p >Veg Burger</p>
+        <p >$<output id="namber4">10</output></p>
     </div>
   </div>
-    <div class="block-basket">Корзина</div>
+    <div class="block-paid">
+  <h3>To be paid:</h3>
+ <p><output></output>$</p>
+ <button onclick="click()" class="btn">Discount 20%</button>
+    </div>
   </section>
 </section>
   <script src="index.js"></script>
