@@ -9,7 +9,7 @@
   <title>JavaScript</title>
 </head>
 <body>
-  <section class="root">
+  <div class="root">
   <h1>Приветствую</h1>
   <h2>Ответы на вопросы</h2>
   <section>
@@ -99,7 +99,13 @@ const form = document.getElementsByName('search-person');<br /></p>
  <button onclick="clickDiscount()" class="btn">Discount 20%</button>
     </div>
   </section>
-</section>
+  <section class="block1">
+    <h3>Введите число</h3>
+    <input class="input-mrg input-color"  type="number" value="text" placeholder="введите число"><br />
+    <input class="input-mrg input-color" disabled><br />
+    <button class="input-color input-btn" onclick="clicCalculation()">Нажмите для вычисления</button> 
+  </section>
+</div>
   <script src="index.js"></script>
 </body>
 </html>
