@@ -6,9 +6,8 @@ const paid = document.querySelectorAll("output")[4];
 const sum = Number.parseInt(namber1) + Number.parseInt(namber2) + Number.parseInt(namber3) + Number.parseInt(namber4);
 paid.textContent = sum;
 
-
-let sum2 = sum-((sum*20)/100);
-
-function click() {
-
+function clickDiscount() {
+paid.textContent = sum-((sum*20)/100);
 }
+
+
