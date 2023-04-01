@@ -3,6 +3,9 @@
   padding-right: 2%;
   font-size: 1.6rem;
 }
+.icon-img {
+width: 4vw;
+}
 .block {
   width: 100%;
   min-height: 40vw;
