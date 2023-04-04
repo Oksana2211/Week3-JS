@@ -1,14 +1,36 @@
 //корзина-скидка
-const namber1 = document.getElementById("namber1").innerHTML;
-const namber2 = document.getElementById("namber2").innerHTML;
-const namber3 = document.getElementById("namber3").innerHTML;
-const namber4 = document.getElementById("namber4").innerHTML;
+const namber1 = document.getElementById("namber1");
+const namber2 = document.getElementById("namber2");
+const namber3 = document.getElementById("namber3");
+const namber4 = document.getElementById("namber4");
+
 const paid = document.querySelectorAll("output")[4];
-const sum = Number.parseInt(namber1) + Number.parseInt(namber2) + Number.parseInt(namber3) + Number.parseInt(namber4);
+
+const sum = 
+Number.parseInt(namber1.innerHTML)+
+Number.parseInt(namber2.innerHTML)+
+Number.parseInt(namber3.innerHTML)+
+Number.parseInt(namber4.innerHTML);
+
 paid.textContent = sum;
 
+let discountAppLied = false;
+
 function clickDiscount() {
-paid.textContent = sum-((sum*20)/100);
+
+if(!discountAppLied){
+  const discount = 0.2;
+  let newSum = sum - sum * discount;
+
+  namber1.innerHTML = (Number.parseInt(namber1.innerHTML)*(1 - discount)).toFixed(2);
+  namber2.innerHTML = (Number.parseInt(namber2.innerHTML)*(1 - discount)).toFixed(2);
+  namber3.innerHTML = (Number.parseInt(namber3.innerHTML)*(1 - discount)).toFixed(2);
+  namber4.innerHTML = (Number.parseInt(namber4.innerHTML)*(1 - discount)).toFixed(2);
+
+  paid.textContent = newSum.toFixed(2);
+
+  discountAppLied = true;
+}
 }
 //
 
